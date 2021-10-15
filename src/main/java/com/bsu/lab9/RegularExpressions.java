@@ -63,7 +63,10 @@ public class RegularExpressions {
 		Operationable operation;
 		operation = (str, i) -> {
 			while(str.charAt(i) == '0') ++i;
-			return i;
+			if(str.charAt(i) <= '9' && str.charAt(i) > '0')
+				return i;
+			else
+				return i - 1;
 		};
 		
 		while(matcher.find()) 
