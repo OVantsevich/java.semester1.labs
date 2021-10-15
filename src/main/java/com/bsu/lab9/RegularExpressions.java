@@ -1,6 +1,5 @@
 package main.java.com.bsu.lab9;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -13,16 +12,16 @@ public class RegularExpressions {
 	public static void main(String[] args) {
 		String[] data;
 		data = InputData("inputLab9.txt");
-		String[] newData = new String[3];;
+		String[] newData = new String[3];
 		newData[0] = RemovingParentheses(data[0]);
 		newData[1] = RemovingNumbers(data[1]);
 		newData[2] = RemovingZero(data[2]);
-		System.out.println("Input data: " + data[0]);
-		System.out.println("Ouput data: " + newData[0] + "\n");
-		System.out.println("Input data: " + data[1]);
-		System.out.println("Ouput data: " + newData[1] + "\n");
-		System.out.println("Input data: " + data[2]);
-		System.out.println("Ouput data: " + newData[2]);
+		System.out.println("Input data1: " + data[0]);
+		System.out.println("Ouput data1: " + newData[0] + "\n");
+		System.out.println("Input data2: " + data[1]);
+		System.out.println("Ouput data2: " + newData[1] + "\n");
+		System.out.println("Input data3: " + data[2]);
+		System.out.println("Ouput data3: " + newData[2]);
 		OutputData(newData, "outputLab9.txt");
 	}
 	
@@ -73,7 +72,6 @@ public class RegularExpressions {
 		return newData.toString();
 	}
 	
-	
 	public static String[] InputData(String fileName) {
 		String[] data = new String[3];
 		try {
@@ -96,8 +94,8 @@ public class RegularExpressions {
 		 try {
 			  FileWriter fl = new FileWriter(fileName);
 			  
-			  for(int i = 0; i< data.length; i++) {
-				  fl.write(data[i]);
+			  for(int i = 0; i < data.length; i++) {
+				  fl.write(data[i] + "\n");
 			  }
 		      
 		      fl.close();
