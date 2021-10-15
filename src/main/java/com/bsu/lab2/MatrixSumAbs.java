@@ -1,4 +1,4 @@
-package main.java.com.bsu.lab2;
+  package main.java.com.bsu.lab2;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
